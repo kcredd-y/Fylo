@@ -1,0 +1,220 @@
+:root {
+  --clr-paleBLue: hsl(243, 100%, 93%);
+  --clr-grayishBlue: hsl(229, 7%, 55%);
+  --clr-darkBlue: hsl(228, 56%, 26%);
+  --clr-verydarkblue: hsl(229, 57%, 11%);
+
+  --ff: "Raleway", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background: url(./images/bg-mobile.png) bottom no-repeat;
+  background-color: var(--clr-verydarkblue);
+  font-size: 0.875rem;
+  font-family: var(--ff);
+  margin: 7.8125rem 1.5625rem;
+}
+
+.top-card {
+  background-color: var(--clr-darkBlue);
+  padding: 2.5rem;
+  border-radius: 0.5rem 6rem 0.5rem 0.5rem;
+}
+.icon {
+  padding: 12px;
+  background-color: var(--clr-verydarkblue);
+  border-radius: 10px;
+}
+
+.flex-group {
+  margin-top: 1.875rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.bottom-card {
+  margin-top: 16px;
+  background-color: var(--clr-darkBlue);
+  padding: 2rem;
+  color: var(--clr-paleBLue);
+  position: relative;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.data-used {
+  font-weight: var(--fw-bold);
+}
+
+.data-left {
+  position: absolute;
+  top: 125px;
+  right: 70px;
+  height: 70px;
+  width: 180px;
+  background-color: white;
+  border-radius: 0.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.bar-container {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  height: 1rem;
+  width: 100%;
+  border: 1px solid var(--clr-verydarkblue);
+  background-color: var(--clr-verydarkblue);
+  border-radius: 1rem;
+  position: relative;
+}
+.bar {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  right: 7px;
+  z-index: 3;
+  transform: translateX(50%);
+}
+
+.data-left span:nth-of-type(1) {
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.data-left span:nth-of-type(2) {
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  font-size: 0.775rem;
+  color: var(--clr-grayishBlue);
+}
+.total-data {
+  padding-left: 68%;
+}
+
+.data-limits {
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(./images/bg-desktop.png) bottom no-repeat;
+    background-color: var(--clr-verydarkblue);
+    margin: 9rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: var(--clr-verydarkblue);
+    background-image: url(./images/bg-desktop.png);
+    background-position: bottom;
+    background-size: contain;
+    margin: 18.125rem 16.25rem;
+  }
+
+  .container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .top-card {
+    padding-right: 8.8rem;
+  }
+
+  .bottom-card {
+    margin-top: 3.4rem;
+    width: 33.75rem;
+    text-align: left;
+  }
+  .total-data {
+    padding-left: 80%;
+  }
+
+  .data-left {
+    top: -45px;
+    right: 40px;
+  }
+
+  .data-left {
+    border-radius: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  .triangle {
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    border-top: 20px solid white;
+    border-left: 20px solid transparent;
+  }
+}

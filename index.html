@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="top-card">
+        <img src="./images/logo.svg" alt="logo" class="logo" />
+        <div class="flex-group">
+          <img
+            class="icon"
+            src="./images/icon-document.svg"
+            alt="Document picture"
+          />
+          <img class="icon" src="./images/icon-folder.svg" alt="folder icon" />
+          <img
+            class="icon"
+            src="./images/icon-upload.svg"
+            alt="cloud with up arrow"
+          />
+        </div>
+      </div>
+      <div class="bottom-card">
+        <p>You’ve used <span class="data-used">815 GB</span> of your storage</p>
+        <div class="data-left">
+          <span>185</span>
+          <span>GB Left</span>
+          <div class="triangle"></div>
+        </div>
+        <div class="bar-container">
+          <div class="bar">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="data-limits">
+          <span>0 GB</span> <span class="total-data">1000 GB</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
